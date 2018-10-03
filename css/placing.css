@@ -1,0 +1,78 @@
+/* this is the layout of the grid container */
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: darkorange;
+  padding: 10px;
+}
+
+/* this is the styling of the grid container */
+.container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+/* this is the individual styling of each block */
+.item1 { 
+    grid-area: header;
+    background-color: rgba(255, 255, 255, 0.8);
+ }
+
+.item2 { 
+    grid-area: menu;
+    background-color: rgba(255, 255, 255, 0.8);
+ }
+
+.item3 { 
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.8);
+ }
+
+.item4 { 
+    grid-area: right;
+    background-color: rgba(255, 255, 255, 0.8);
+ }
+
+.item5 { 
+    grid-area: footer;
+    background-color: rgba(255, 255, 255, 0.8);
+ }
+
+ @media only screen and (max-width: 320px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+          'header'
+          'menu' 
+          'main' 
+          'right'
+          'footer';
+        grid-gap: 10px;
+        background-color: darkorange;
+        padding: 10px;
+      }
+
+ }
+
+ @media only screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+          'header header'
+          'menu menu' 
+          'main menu' 
+          'right right'
+          'footer footer';
+        grid-gap: 10px;
+        background-color: darkorange;
+        padding: 10px;
+      }
+
+ }
+
