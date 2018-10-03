@@ -2,9 +2,9 @@
 .container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
+    'header header header'
+    'aside main main'
+    'aside footer footer';
   grid-gap: 10px;
   background-color: darkorange;
   padding: 10px;
@@ -21,58 +21,51 @@
 /* this is the individual styling of each block */
 .item1 { 
     grid-area: header;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color:pink;
  }
 
 .item2 { 
-    grid-area: menu;
-    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: aside;
+    background-color: palevioletred;
  }
 
 .item3 { 
     grid-area: main;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: plum;
  }
 
 .item4 { 
-    grid-area: right;
-    background-color: rgba(255, 255, 255, 0.8);
- }
-
-.item5 { 
     grid-area: footer;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: peachpuff;
  }
 
- @media only screen and (max-width: 320px) {
-    .container {
-        display: grid;
-        grid-template-areas:
-          'header'
-          'menu' 
-          'main' 
-          'right'
-          'footer';
-        grid-gap: 10px;
-        background-color: darkorange;
-        padding: 10px;
-      }
-
- }
-
- @media only screen and (max-width: 768px) {
-    .container {
-        display: grid;
-        grid-template-areas:
-          'header header'
-          'menu menu' 
-          'main menu' 
-          'right right'
-          'footer footer';
-        grid-gap: 10px;
-        background-color: darkorange;
-        padding: 10px;
-      }
-
- }
-
+ 
+ @media (max-width: 768px) {
+   .container {
+     display: grid;
+     grid-template-areas:
+     'header header'
+     'aside main' 
+     'footer footer';
+     grid-gap: 10px;
+     background-color: darkorange;
+     padding: 10px;
+    }
+    
+  }
+  
+  
+  @media (max-width: 320px) {
+     .container {
+         display: grid;
+         grid-template-areas:
+           'header'
+           'aside' 
+           'main' 
+           'footer';
+         grid-gap: 10px;
+         background-color: darkorange;
+         padding: 10px;
+       }
+ 
+  }
